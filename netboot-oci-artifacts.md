@@ -101,7 +101,7 @@ For the rest of image definition refer to the [OCI specs](https://github.com/ope
 ```
 
 
-## Image tag naming conventions
+## Image manifest tag naming conventions
 
 An image manifest containing Netboot files MUST be tagged in the format of ``version-architecture`` where:
 
@@ -112,6 +112,51 @@ An image manifest containing Netboot files MUST be tagged in the format of ``ver
 * ``architecture`` SHOULD be one of the values listed in the Go Language document for
   [GOARCH](https://go.dev/doc/install/source#environment).
 
+
+## Image index containing OCI artifacts
+
+For the multi-arch builds it is possible to create [OCI image index](https://github.com/opencontainers/image-spec/blob/main/image-index.md)
+that points to specific image manifests, ideal for one or more platforms.
+
+Every entry of image manifest MAY specify additional OPTIONAL metadata via annotations.
+
+
+## Example OCI Image Index
+
+```json
+
+{
+  "schemaVersion": 2,
+  "mediaType": "application/vnd.oci.image.index.v1+json",
+  "artifactType": "application/vnd.unknown.artifact.v1",
+  "manifests": [
+    {
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "digest": "sha256:93a5ef6e62b75db1fd6c95a4e164b02669d569b23aab20d1dccbb0c381111e35",
+      "size": 507,
+      "annotations": {
+        "netboot": "pxe"
+      },
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      }
+    },
+    {
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "digest": "sha256:858f6fd30a0336eeb615918dae8cdc091874fb560826f106b86a80ed12140775",
+      "size": 508,
+      "annotations": {
+        "netboot": "pxe"
+      },
+      "platform": {
+        "architecture": "aarch64",
+        "os": "linux"
+      }
+    }
+  ]
+}
+```
 
 ## Notational Conventions
 
