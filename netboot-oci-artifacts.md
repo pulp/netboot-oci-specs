@@ -103,8 +103,9 @@ For the rest of image definition refer to the [OCI specs](https://github.com/ope
 
 ## Image manifest tag naming conventions
 
-An image manifest containing Netboot files MUST be tagged in the format of ``version-architecture`` where:
+An image manifest containing Netboot files MUST be tagged in the format of ``name-version-architecture`` where:
 
+* ``name`` SHOULD be OS lowercase name ( e.g rhel, fedora)
 * ``version`` SHOULD specify OS version number in lowercase alphanumeric with dots or underscores without
   dash character (e.g. 39 or 2024.04 or 9.2).
   For rolling-release operating systems, version SHOULD contain date or timestamp, sortable order
