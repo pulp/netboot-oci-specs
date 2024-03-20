@@ -46,6 +46,7 @@ storing into layers:
 
 * `shim.efi`
 * `grubx64.efi`
+* `pxelinux.0` or `grubx64.0`
 * `vmlinuz`
 * `initrd.img`
 * `install.img`
@@ -55,7 +56,7 @@ Each file MUST be compressed via zstd compression algorithm. Each layer MUST hav
 
 * `org.opencontainers.image.title`: filename
 * `org.pulpproject.netboot.src.digest`: sha256 sum of the uncompressed file contents
-* `org.pulpproject.netboot.src.size"`: uncompressed file size
+* `org.pulpproject.netboot.src.size`: uncompressed file size
 
 ## Image manifest tag naming conventions
 
