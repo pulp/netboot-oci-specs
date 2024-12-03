@@ -1,4 +1,4 @@
-# Netboot OCI specification
+# Netboot/Kickstart artifacts OCI specification
 
 This repository includes specifications related to storing Network Boot files, including PXE, as
 [OCI artifacts](https://github.com/opencontainers/image-spec/blob/main/artifacts-guidance.md)
@@ -7,7 +7,7 @@ via the [OCI Distribution Specification](https://github.com/opencontainers/distr
 
 Included specifications describe:
 
-* **[Netboot OCI artifacts](netboot-oci-artifacts.md)**
+* **[Netboot/Kickstart OCI artifacts](netboot-oci-artifacts.md)**
 Netboot OCI artifacts packaged into an OCI image manifest.
 
 # Authors

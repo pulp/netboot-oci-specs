@@ -83,6 +83,7 @@ Manifest index MUST have the following annotation `"org.pulpproject.netboot.vers
       "digest": "sha256:190ae282c4bc3b55dfd91239878c0c422898af8065244253d342f870f7c2263d",
       "size": 1541,
       "annotations": {
+        "org.opencontainers.image.source": "https://gitlab.com/fedora/bootc/artifacts/kickstart-artifacts",
         "org.pulpproject.netboot.version": "1"
       },
       "platform": {
@@ -97,6 +98,7 @@ Manifest index MUST have the following annotation `"org.pulpproject.netboot.vers
       "digest": "sha256:6b26f794eafa6df574e41203b9542ae614436f00d7ee2f86e61bcbdc89a30ed1",
       "size": 1342,
       "annotations": {
+        "org.opencontainers.image.source": "https://gitlab.com/fedora/bootc/artifacts/kickstart-artifacts",
         "org.pulpproject.netboot.version": "1"
       },
       "platform": {
@@ -108,6 +110,7 @@ Manifest index MUST have the following annotation `"org.pulpproject.netboot.vers
     }
   ],
   "annotations": {
+    "org.opencontainers.image.source": "https://gitlab.com/fedora/bootc/artifacts/kickstart-artifacts",
     "org.pulpproject.netboot.version": "1"
   }
 }
@@ -185,6 +188,7 @@ Manifest index MUST have the following annotation `"org.pulpproject.netboot.vers
     }
   ],
   "annotations": {
+    "org.opencontainers.image.source": "https://gitlab.com/fedora/bootc/artifacts/kickstart-artifacts",
     "org.pulpproject.netboot.version": "1"
   }
 }
